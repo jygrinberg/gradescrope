@@ -1,18 +1,11 @@
 /*
-Tired of having to navigate to a specific question on Gradescope for each of your students? This script harnesses
-the power of computer science, big data analytics, machine learning, and Bayes' Theorem to save a few seconds. 
-This script opens in a new tab each student's submission for a specific question.
-
-Note:
-If you try this script and nothing happens, you might need to enable popups from Gradescope.
-
 Instructions:
 1. Update the parameter below with a comma-separated list of student @stanford.edu email address.
 */
 var commaSeparatedListOfEmails = "apluslatex@stanford.edu,blurryphonephotos@stanford.edu,regraderequester@stanford.edu";
 /*
 2. Open up Chrome and navigate to the Gradescope webpage listing all the students' homework submission for the specific
-question you would like to grade. For example, the URL for HW1 Problem 1 is:
+question you would like to grade. For example, the URL for HW1 Question 1 is:
 https://gradescope.com/courses/5731/questions/182511/submissions
 3. Type "javascript:" (without the quotation marks) in the browser URL bar.
 4. Copy this entire script, and paste it after the "javascript:" that you just typed in the URL bar.
@@ -24,11 +17,11 @@ var emails = new Set(commaSeparatedListOfEmails.split(","));
 var aTags = document.getElementsByTagName("a");
 var numFound = 0;
 
-/* Iterate over all anchor tags. */
+/* Iterate over all anchor tags in the page. */
 for (var i = 0; i < aTags.length; i++) {
 	var aTagContent = aTags[i].textContent;
 
-	/* Skip the current anchor tag if its innerHTML does not contain a Stanford email address, open parenthesis, or 
+	/* Skip the current anchor tag if its innerHTML does not contain a Stanford email address, open parenthesis, and 
 	closed parenthesis. */
  	if (aTagContent.indexOf("@stanford.edu") == -1 || aTagContent.indexOf("(") == -1 || aTagContent.indexOf(")") == -1) {
  		continue;
