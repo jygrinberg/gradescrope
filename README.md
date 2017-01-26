@@ -1,4 +1,4 @@
-This script helps make using Gradescope efficient. In particular, it helps graders who like grading one question at a time 
+This script helps make grade on Gradescope efficient. In particular, it helps graders who like grading one question at a time 
 for all their students, rather than grading the entire problem set for one student at a time. 
 
 This script opens a new tab in your browser with each student's submission for a specific question. For example, when
