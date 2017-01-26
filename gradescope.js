@@ -1,15 +1,16 @@
 /*
 Instructions:
-1. Update the parameter below with a comma-separated list of student @stanford.edu email address.
+1. Copy and paste this script into a text editor.
+2. Update the parameter below with a comma-separated list of student @stanford.edu email address.
 */
 var commaSeparatedListOfEmails = "apluslatex@stanford.edu,blurryphonephotos@stanford.edu,regraderequester@stanford.edu";
 /*
-2. Open up Chrome and navigate to the Gradescope webpage listing all the students' homework submission for the specific
+3. Open up Chrome and navigate to the Gradescope webpage listing all the students' homework submission for the specific
 question you would like to grade. For example, the URL for HW1 Question 1 is:
 https://gradescope.com/courses/5731/questions/182511/submissions
-3. Type "javascript:" (without the quotation marks) in the browser URL bar.
-4. Copy this entire script, and paste it after the "javascript:" that you just typed in the URL bar.
-5. Hit enter.
+4. Type "javascript:" (without the quotation marks) in your browser URL bar.
+5. Copy this entire script, and paste it after the "javascript:" that you just typed in the URL bar.
+6. Hit enter.
 */
 
 var alertMode = true;
