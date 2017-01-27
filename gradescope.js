@@ -17,6 +17,7 @@ var alertMode = true;
 var emails = new Set(commaSeparatedListOfEmails.split(","));
 var aTags = document.getElementsByTagName("a");
 var numFound = 0;
+var numEmails = emails.size;
 
 /* Iterate over all anchor tags in the page. */
 for (var i = 0; i < aTags.length; i++) {
@@ -34,6 +35,8 @@ for (var i = 0; i < aTags.length; i++) {
  	/* Skip the current anchor tag if its email address is not in the set of desired email addresses. */
  	if (!emails.has(email)) {
  		continue;
+ 	} else {
+ 		emails.delete(email);
  	}
 
  	/* Open the current anchor tag's link in a new tab. */
@@ -42,7 +45,13 @@ for (var i = 0; i < aTags.length; i++) {
 }
 
 /* Log and (optionally) alert the results. */
-var resultsStatement = "Found " + numFound.toString() + " of " + emails.size.toString() + " emails.";
+var resultsStatement = "Found " + numFound.toString() + " of " + numEmails.toString() + " emails.";
+if (numFound < numEmails) {
+	resultsStatement += "\nMissing:"
+}
+for (var email of emails) {
+	resultsStatement += "\n" + email;
+}
 console.log(resultsStatement);
 if (alertMode) {
 	alert(resultsStatement);
