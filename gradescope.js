@@ -1,7 +1,7 @@
 /*
 Instructions:
 1. Copy and paste this script into a text editor.
-2. Update the parameter below with a comma-separated list of student @stanford.edu email address.
+2. Update the parameter below with a comma-separated list of student @stanford.edu email addresses.
 */
 var commaSeparatedListOfEmails = "apluslatex@stanford.edu,blurryphonephotos@stanford.edu,regraderequester@stanford.edu";
 /*
